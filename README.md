@@ -1,8 +1,9 @@
 # Devices API
 
 A simple Spring Boot REST API for managing devices.  
-It uses **PostgreSQL** as the database and **Docker Compose** for containerization.
-
+It uses **PostgreSQL** and **MySql** as the database
+and **Docker Compose** for containerization.
+The database can be any relational databse
 ---
 
 ## 🚀 Features
@@ -64,3 +65,5 @@ docker compose -f .\docker-compose-mysql.yml down
 - 
 ### Exposes **Swagger UI** at:  
   [http://localhost:8085/swagger-ui.html](http://localhost:8085/swagger-ui.html)
+
+***MORE*** [DOCUMENTATION.md](DOCUMENTATION.md)
