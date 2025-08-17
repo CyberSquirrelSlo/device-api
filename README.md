@@ -122,4 +122,4 @@ mvn clean verify
 
 ## 📖 More documentation at: 
 
-[DOCUMENTATION.md](DOCUMENTATION.md)
+[DOCUMENTATION](DOCUMENTATION.md)
