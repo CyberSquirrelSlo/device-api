@@ -110,7 +110,7 @@ mvn clean verify
 
 ```
 
-### Jacoco results are at:
+### 📊 Jacoco results are at:
 
 ```
 /target/site/jacoco/index.html
