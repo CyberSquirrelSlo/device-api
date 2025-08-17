@@ -134,7 +134,7 @@
         <version>3.2.5</version>
         <configuration>
           <!-- Increase the grace period before it logs that message -->
-          <exitTimeout>120</exitTimeout>
+          <!--<exitTimeout>120</exitTimeout>-->
           <!-- Optional: avoid reusing forks in case shutdown hooks linger -->
           <!-- <reuseForks>false</reuseForks> -->
         </configuration>
