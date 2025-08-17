@@ -1,4 +1,7 @@
 spring:
+  application:
+    name: devices-api
+
   datasource:
     url: jdbc:mysql://mysql:3306/devicesdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: devices_user

@@ -88,6 +88,14 @@ mvn clean verify
 
 ```
 
+#### Jacoco results are at:
+
+```
+
+    /target/site/jacoco/index.html
+
+```
+
 ### Exposes **Swagger UI** at: 
 
   [http://localhost:8085/swagger-ui.html](http://localhost:8085/swagger-ui.html)
