@@ -91,9 +91,7 @@ mvn clean verify
 #### Jacoco results are at:
 
 ```
-
-    /target/site/jacoco/index.html
-
+/target/site/jacoco/index.html
 ```
 
 ### Exposes **Swagger UI** at: 
