@@ -1,9 +1,11 @@
 # Devices API
 
+---
+
 A simple Spring Boot REST API for managing devices.  
-It uses **PostgreSQL** and **MySql** as the database
-and **Docker Compose** for containerization.
+It uses **PostgreSQL** and **MySql** as the database and **Docker Compose** for containerization.
 The database can be any relational databse
+
 ---
 
 ## 🚀 Features
