@@ -24,17 +24,43 @@ It uses **PostgreSQL** as the database and **Docker Compose** for containerizati
 
 ## ▶️ Running with Docker Compose
 
-Build and start the containers:
+### Build and start the containers for the app with postgresql database:
 
 ```bash
 
-docker compose build
+docker compose build --no-cache
 docker compose up
+
+```
+
+### Stop and remove containers
+
+```bash
+
+docker compose down
+
+```
+
+### Build and start the containers for the app with postgresql database:
+
+```bash
+
+docker compose -f .\docker-compose-mysql.yml build --no-cache
+docker compose up
+
+```
+
+### Stop and remove containers
+
+```bash
+
+docker compose down
 
 ```
 
 ## Notes
 - Enum **DeviceState** is stored as a **STRING** in DB.
 - Uses **Lombok** for boilerplate reduction.
-- Exposes **Swagger UI** at:  
+- 
+### Exposes **Swagger UI** at:  
   [http://localhost:8085/swagger-ui.html](http://localhost:8085/swagger-ui.html)
