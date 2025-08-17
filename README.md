@@ -59,11 +59,7 @@ docker compose -f .\docker-compose-mysql.yml down
 
 ```
 
-## Notes
-- Enum **DeviceState** is stored as a **STRING** in DB.
-- Uses **Lombok** for boilerplate reduction.
-- 
 ### Exposes **Swagger UI** at:  
   [http://localhost:8085/swagger-ui.html](http://localhost:8085/swagger-ui.html)
 
-***MORE*** [DOCUMENTATION.md](DOCUMENTATION.md)
+***More...*** [DOCUMENTATION.md](DOCUMENTATION.md)
