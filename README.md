@@ -41,7 +41,7 @@ docker compose down
 
 ```
 
-### Build and start the containers for the app with postgresql database:
+### Build and start the containers for the app with mysql database:
 
 ```bash
 
@@ -54,7 +54,7 @@ docker compose up
 
 ```bash
 
-docker compose down
+docker compose -f .\docker-compose-mysql.yml down
 
 ```
 
