@@ -73,12 +73,18 @@ If you want to test the other one, first stop and remove containers and then sta
 - **devices-db-mysql** → PostgreSQL database on port **3307**
 
 
-## Run the aplication localy
+## ▶️ Run the aplication localy
 
 ---
 
 First start coresponding DB container.
-Also use coresponding applicaton.yml file 
+
+---
+
+And use coresponding applicaton.yml file
+
+---
+
 then run
 
 ```bash
@@ -87,7 +93,6 @@ then run
  
 ```
 
----
 
 ## Tests
 
