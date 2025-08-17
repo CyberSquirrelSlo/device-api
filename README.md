@@ -1,4 +1,4 @@
-# Devices API
+# Devices REST API
 
 ---
 
@@ -61,7 +61,8 @@ docker compose -f .\docker-compose-mysql.yml down
 
 ```
 
-### Exposes **Swagger UI** at:  
+### Exposes **Swagger UI** at: 
+
   [http://localhost:8085/swagger-ui.html](http://localhost:8085/swagger-ui.html)
 
-***More...*** [DOCUMENTATION.md](DOCUMENTATION.md)
+***More documentation at:*** [DOCUMENTATION.md](DOCUMENTATION.md)
