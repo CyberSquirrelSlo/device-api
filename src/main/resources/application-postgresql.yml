@@ -3,10 +3,10 @@ spring:
     name: devices-api
 
   datasource:
-    url: jdbc:mysql://mysql:3306/devicesdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    url: jdbc:postgresql://localhost:5434/devicesdb
     username: devices_user
     password: devices_pass
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:

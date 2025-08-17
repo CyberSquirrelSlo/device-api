@@ -72,7 +72,24 @@ If you want to test the other one, first stop and remove containers and then sta
 - **devices-db** → PostgreSQL database on port **5432**
 - **devices-db-mysql** → PostgreSQL database on port **3307**
 
-### Tests
+
+## Run the aplication localy
+
+---
+
+First start coresponding DB container.
+Also use coresponding applicaton.yml file 
+then run
+
+```bash
+
+ mvn spring-boot:run
+ 
+```
+
+---
+
+## Tests
 
 ---
 
@@ -80,7 +97,7 @@ Be sure you have started docker desktop
 
 ---
 
-#### To run the tests
+### To run the tests
 
 ```bash
 
@@ -88,13 +105,13 @@ mvn clean verify
 
 ```
 
-#### Jacoco results are at:
+### Jacoco results are at:
 
 ```
 /target/site/jacoco/index.html
 ```
 
-### Exposes **Swagger UI** at: 
+## Exposes **Swagger UI** at: 
 
   [http://localhost:8085/swagger-ui.html](http://localhost:8085/swagger-ui.html)
 
