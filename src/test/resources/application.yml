@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
+  datasource:
+    hikari:
+      maximumPoolSize: 1
+      minimumIdle: 0
+      maxLifetime: 20000
+      idleTimeout: 10000
+      connectionTimeout: 10000
+
+logging:
+  level:
+    com.zaxxer.hikari: ERROR
