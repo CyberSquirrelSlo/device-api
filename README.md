@@ -61,6 +61,11 @@ docker compose -f .\docker-compose-mysql.yml down
 
 ```
 
+
+### Services
+- **devices-api** → Runs Spring Boot on port **8085**
+- **devices-db** → PostgreSQL database on port **5432**
+
 ### Exposes **Swagger UI** at: 
 
   [http://localhost:8085/swagger-ui.html](http://localhost:8085/swagger-ui.html)

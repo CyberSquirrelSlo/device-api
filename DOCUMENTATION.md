@@ -1,6 +1,6 @@
 # Devices API Documentation
 
-This document provides extended details about the **Devices API** project, including API endpoints, database schema, and Docker setup.
+This document provides extended details about the **Devices REST API** project, including API endpoints, database schema, and Docker setup.
 
 ---
 
@@ -113,47 +113,10 @@ Request body:
 **DELETE** `/api/devices/{id}`  
 Response: `204 No Content`
 
----
-
-## 4. Docker Setup
-
-### Build and Start
-```sh
-
-docker compose build
-docker compose up 
-
-```
-
-### Services
-- **devices-api** → Runs Spring Boot on port **8085**
-- **devices-db** → PostgreSQL database on port **5432**
 
 ---
 
-## 5. Flyway Migrations
-
-Flyway manages DB migrations automatically on application startup.  
-Migration scripts should be placed in:
-```
-src/main/resources/db/migration
-```
-
-Example:
-```sql
--- src/main/resources/db/migration/V1__create_devices_table.sql
-CREATE TABLE devices (
-    id UUID PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    brand VARCHAR(255) NOT NULL,
-    state VARCHAR(50) NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT NOW()
-);
-```
-
----
-
-## 6. Notes
+## 4. Notes
 - Enum **DeviceState** is stored as a **STRING** in DB.
 - Uses **Lombok** for boilerplate reduction.
 - Exposes **Swagger UI** at:  
