@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: devices-db
+    environment:
+      POSTGRES_DB: devicesdb
+      POSTGRES_USER: devices_user
+      POSTGRES_PASSWORD: devices_pass
+    ports:
+      - "5434:5432"          # host:container
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U devices_user -d devicesdb"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  app:
+    build: .
+    container_name: devices-api
+    depends_on:
+        db:
+          condition: service_healthy
+    ports:
+        - "8085:8085"          # host:container (keep app on 8080 internally)
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:postgresql://devices-db:5432/devicesdb
+      SPRING_DATASOURCE_USERNAME: devices_user
+      SPRING_DATASOURCE_PASSWORD: devices_pass
+
+volumes:
+  db_data:
