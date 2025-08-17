@@ -110,14 +110,16 @@ mvn clean verify
 
 ```
 
-### 📊 Jacoco results are at:
+## 📊 Jacoco results are at:
 
 ```
 /target/site/jacoco/index.html
 ```
 
-## Exposes **Swagger UI** at: 
+## 📝 Exposes **Swagger UI** at: 
 
   [http://localhost:8085/swagger-ui.html](http://localhost:8085/swagger-ui.html)
 
-***More documentation at:*** [DOCUMENTATION.md](DOCUMENTATION.md)
+## 📖 More documentation at: 
+
+[DOCUMENTATION.md](DOCUMENTATION.md)
