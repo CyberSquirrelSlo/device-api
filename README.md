@@ -94,7 +94,7 @@ then run
 ```
 
 
-## Tests
+## 🧪 Tests
 
 ---
 
