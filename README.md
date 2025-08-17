@@ -3,13 +3,13 @@
 ---
 
 A simple Spring Boot REST API for managing devices.  
-It uses **PostgreSQL** and **MySql** as the database and **Docker Compose** for containerization.
-The database can be any relational databse
+It uses **PostgreSQL** and **MySQL** as the databases and **Docker Compose** for containerization.
+The database can be any relational database
 
 ---
 
 ## 🚀 Features
-- Create, read, update, delete devices
+- Create, read, update, and delete devices
 - Filter devices by:
     - `brand`
     - `state` (AVAILABLE, IN_USE, INACTIVE)
@@ -27,7 +27,7 @@ The database can be any relational databse
 
 ## ▶️ Running with Docker Compose
 
-### Build and start the containers for the app with postgresql database:
+### Build and start the containers for the app with PostgreSQL database:
 
 ```bash
 
@@ -44,7 +44,7 @@ docker compose down
 
 ```
 
-### Build and start the containers for the app with mysql database:
+### Build and start the containers for the app with MySQL database:
 
 ```bash
 
@@ -66,8 +66,8 @@ docker compose -f .\docker-compose-mysql.yml down
 
 ### Services
 
-You try one at the time. First build with docker as shown above then start it after 
-if you want to test the other one you first stop and remove containers and start with the other database 
+You try one at a time. First, build with Docker as shown above, then start it after 
+If you want to test the other one, first stop and remove containers and then start with the other database 
 
 #### Ports
 
