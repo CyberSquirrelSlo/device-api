@@ -1,23 +1,5 @@
 version: '3.9'
-
 services:
-  db:
-    image: postgres:16-alpine
-    container_name: devices-db
-    environment:
-      POSTGRES_DB: devicesdb
-      POSTGRES_USER: devices_user
-      POSTGRES_PASSWORD: devices_pass
-    ports:
-      - "5434:5432"          # host:container
-    volumes:
-      - db_data:/var/lib/postgresql/data
-    healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U devices_user -d devicesdb" ]
-      interval: 5s
-      timeout: 3s
-      retries: 20
-
   mysql:
     image: mysql:8.4
     container_name: devices-mysql
@@ -37,6 +19,8 @@ services:
       retries: 20
       start_period: 10s
     restart: unless-stopped
+    networks:
+      device-api-mysql:
 
   app:
     build: .
@@ -45,20 +29,22 @@ services:
       mysql:
         condition: service_healthy
     ports:
-      - "8085:8085"        # host:container
+      - "8085:8080"
     environment:
       SPRING_PROFILES_ACTIVE: mysql
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/devicesdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: devices_user
       SPRING_DATASOURCE_PASSWORD: devices_pass
-      # Key line: let Hibernate manage the schema
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      # Optional (handy for debugging)
       SPRING_JPA_SHOW_SQL: "true"
       SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: "true"
-      SERVER_PORT: 8085
+      SERVER_PORT: 8080
     restart: unless-stopped
+    networks:
+      device-api-mysql:
 
 volumes:
   mysql_data_v2:
-  db_data:
+networks:
+  device-api-mysql:
+    driver: bridge
