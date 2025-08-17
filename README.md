@@ -61,9 +61,6 @@ docker compose -f .\docker-compose-mysql.yml down
 
 ```
 
-
-
-
 ### Services
 
 You try one at a time. First, build with Docker as shown above, then start it after 
@@ -74,6 +71,22 @@ If you want to test the other one, first stop and remove containers and then sta
 - **devices-api** → Runs Spring Boot on port **8085** (both MySql and Postgres app)
 - **devices-db** → PostgreSQL database on port **5432**
 - **devices-db-mysql** → PostgreSQL database on port **3307**
+
+### Tests
+
+---
+
+Be sure you have started docker desktop
+
+---
+
+#### To run the tests
+
+```bash
+
+mvn clean verify
+
+```
 
 ### Exposes **Swagger UI** at: 
 
